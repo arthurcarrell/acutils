@@ -38,3 +38,16 @@ Simply just renames number types:<br>
 `float` -> `f32`<br>
 `double` -> `f64`<br>
  etc...
+
+## ac_vec2.h
+Adds Vector2's to C. This **does require an implementation definition.**
+
+Gives maths functions to do stuff like add, divide, scale, compare etc...
+This does use the *math.h* library.
+
+At the top of your main.c file / whatever file is called first, put this:
+```c
+#define AC_VEC2_IMPL
+#include "ac_vec2.h"
+```
+This needs to be **before** any file that uses ac_vec2.h (this includes C files)
