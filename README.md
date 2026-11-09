@@ -28,3 +28,13 @@ int main(int argc, char** argv) {
 (src/main.c:6)[WARN]: Something aint right
 (src/main.c:7)[ERROR]: Something is very wrong!
 ```
+
+## ac_num.h
+Does not require an implementation definition.
+
+Simply just renames number types:<br>
+`int32_t` -> `i32`<br>
+`uint16_t` -> `u16`<br>
+`float` -> `f32`<br>
+`double` -> `f64`<br>
+ etc...
