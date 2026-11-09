@@ -51,3 +51,23 @@ At the top of your main.c file / whatever file is called first, put this:
 #include "ac_vec2.h"
 ```
 This needs to be **before** any file that uses ac_vec2.h (this includes C files)
+
+```c
+#define AC_VEC2_IMPL
+#include "ac_vec2.h"
+
+int main(int argc, char** argv) {
+    Vec2f vector = VEC2F(2.0f, 5.0f);
+    vector = Vec2f_sca(vector, 10);
+    printf("Vec2f: x: %f y: %f\n", vector.x, vector.y);
+
+    Vec2 intvec = VEC2(10, 5);
+    intvec = Vec2_sca(Vec2_add(intvec, VEC2(10, 5)), 10);
+    printf("Vec2: x: %i y: %i\n", intvec.x, intvec.y);
+    return 0;
+}
+```
+```
+Vec2f: x: 20.000000 y: 50.000000
+Vec2: x: 200 y: 100
+```

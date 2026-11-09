@@ -29,6 +29,9 @@ Vec2 Vec2_mul(Vec2 a, Vec2 b);
 Vec2 Vec2_div(Vec2 a, Vec2 b);
 Vec2 Vec2_sca(Vec2 a, int b);
 
+// Convert a Vec2 to a Vec2f
+Vec2f Vec2_float(Vec2 a);
+
 // Returns 1 (true) if the vectors match, 0 (false) if otherwise.
 int Vec2_cmp(Vec2 a, Vec2 b);
 
@@ -52,6 +55,7 @@ Vec2 Vec2_div(Vec2 a, Vec2 b) { return VEC2(a.x / b.x, a.y / b.y); }
 Vec2 Vec2_sca(Vec2 a, int b) { return VEC2(a.x * b, a.y * b); }
 int Vec2_cmp(Vec2 a, Vec2 b) {return a.x == b.x && a.y == b.y; }
 
+Vec2f Vec2_float(Vec2 a) {return VEC2F(a.x, a.y);}
 #endif
 
 #endif
